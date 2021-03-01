@@ -1,45 +1,9 @@
 import React, { useContext, useReducer } from "react";
+import { reducer, initalState } from "./reducers/timeReducer";
 
 const timerContext = React.createContext();
 timerContext.Display = "Timer";
 
-const initalState = {
-  timer: 5,
-  pause: false,
-  intervalID: null,
-};
-const reducer = (state = initalState, action) => {
-  switch (action.type) {
-    case "PLAY":
-      return {
-        ...state,
-        timer: action.payload.update,
-        intervalID: action.payload.intervalID,
-        pause: false,
-      };
-    case "PAUSE":
-      console.log("pause");
-      clearInterval(state.intervalID);
-      return {
-        ...state,
-        timer: state.timer,
-        pause: true,
-        intervalID: null,
-      };
-    case "DURATION_CHANGE":
-      return {
-        ...state,
-      };
-    case "OVER":
-      clearInterval(state.intervalID);
-      return {
-        ...state,
-        timer: 0,
-      };
-    default:
-      return state;
-  }
-};
 export const TimerProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initalState);
   return (
