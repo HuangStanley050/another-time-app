@@ -1,6 +1,6 @@
 import React from "react";
 
 const PauseButton = () => {
-  return <button>Pause</button>;
+  return <button id="pause">Pause</button>;
 };
 export default PauseButton;

@@ -1,6 +1,6 @@
 import React from "react";
 
 const InputDuration = () => {
-  return <input></input>;
+  return <input id="duration"></input>;
 };
-export default PlayButton;
+export default InputDuration;

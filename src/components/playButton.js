@@ -1,6 +1,6 @@
 import React from "react";
 
 const PlayButton = () => {
-  return <button>Play</button>;
+  return <button id="start">Play</button>;
 };
 export default PlayButton;
