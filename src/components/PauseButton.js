@@ -3,8 +3,15 @@ import { useTimer } from "../contexts/Timer";
 
 const PauseButton = () => {
   const { state, dispatch } = useTimer();
+  const updateTimer = () => {
+    const currentTime = state.timer;
+    dispatch({
+      type: "PAUSE",
+      payload: currentTime,
+    });
+  };
   return (
-    <button onClick={() => dispatch({ type: "PAUSE" })} id="pause">
+    <button onClick={updateTimer} id="pause">
       Pause
     </button>
   );
