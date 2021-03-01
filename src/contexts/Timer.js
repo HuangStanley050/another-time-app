@@ -3,17 +3,30 @@ import React, { useContext, useReducer } from "react";
 const timerContext = React.createContext();
 timerContext.Display = "Timer";
 
-const initalState = {};
+const initalState = {
+  timer: 27,
+};
 const reducer = (state = initalState, action) => {
   switch (action.type) {
     case "PLAY":
-      return "PLAY";
+      return {
+        ...state,
+        timer: (state.timer += 1),
+      };
     case "PAUSE":
-      return "PAUSE";
+      return {
+        ...state,
+      };
     case "DURATION_CHANGE":
-      return "DURATION_CHANGE";
+      return {
+        ...state,
+      };
+    case "TICK":
+      return {
+        ...state,
+      };
     default:
-      return "I got nothing";
+      return state;
   }
 };
 export const TimerProvider = ({ children }) => {

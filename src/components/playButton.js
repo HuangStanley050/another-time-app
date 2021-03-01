@@ -3,9 +3,13 @@ import { useTimer } from "../contexts/Timer";
 
 const PlayButton = () => {
   const { state, dispatch } = useTimer();
-  console.log(state);
+  const updateTimer = () => {
+    setInterval(() => {
+      dispatch({ type: "PLAY" });
+    }, 1000);
+  };
   return (
-    <button onClick={() => dispatch({ type: "PLAY" })} id="start">
+    <button onClick={updateTimer} id="start">
       Play
     </button>
   );
