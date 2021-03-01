@@ -1,6 +1,13 @@
 import React from "react";
+import { useTimer } from "../contexts/Timer";
 
 const PlayButton = () => {
-  return <button id="start">Play</button>;
+  const { state, dispatch } = useTimer();
+  console.log(state);
+  return (
+    <button onClick={() => dispatch({ type: "WOW" })} id="start">
+      Play
+    </button>
+  );
 };
 export default PlayButton;
