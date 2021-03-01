@@ -4,14 +4,14 @@ const timerContext = React.createContext();
 timerContext.Display = "Timer";
 
 const initalState = {
-  timer: 27,
+  timer: 60,
 };
 const reducer = (state = initalState, action) => {
   switch (action.type) {
     case "PLAY":
       return {
         ...state,
-        timer: (state.timer += 1),
+        timer: action.payload,
       };
     case "PAUSE":
       return {

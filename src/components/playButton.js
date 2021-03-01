@@ -5,7 +5,8 @@ const PlayButton = () => {
   const { state, dispatch } = useTimer();
   const updateTimer = () => {
     setInterval(() => {
-      dispatch({ type: "PLAY" });
+      const update = (state.timer -= 1);
+      dispatch({ type: "PLAY", payload: update });
     }, 1000);
   };
   return (
