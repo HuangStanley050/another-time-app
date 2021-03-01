@@ -5,7 +5,7 @@ const PlayButton = () => {
   const { state, dispatch } = useTimer();
   console.log(state);
   return (
-    <button onClick={() => dispatch({ type: "WOW" })} id="start">
+    <button onClick={() => dispatch({ type: "PLAY" })} id="start">
       Play
     </button>
   );

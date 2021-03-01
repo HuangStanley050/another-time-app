@@ -6,8 +6,12 @@ timerContext.Display = "Timer";
 const initalState = {};
 const reducer = (state = initalState, action) => {
   switch (action.type) {
-    case "WOW":
-      return "wow indeed";
+    case "PLAY":
+      return "PLAY";
+    case "PAUSE":
+      return "PAUSE";
+    case "DURATION_CHANGE":
+      return "DURATION_CHANGE";
     default:
       return "I got nothing";
   }
