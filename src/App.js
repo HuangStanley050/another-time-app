@@ -15,9 +15,14 @@ function App() {
         <div>
           <TimerText />
         </div>
-        <InputDuration />
-        <PlayButton />
-        <PauseButton />
+
+        <CircleDisplay />
+
+        <div>
+          <InputDuration />
+          <PlayButton />
+          <PauseButton />
+        </div>
       </TimerProvider>
     </div>
   );

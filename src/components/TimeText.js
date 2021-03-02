@@ -8,7 +8,7 @@ const TimerText = () => {
       dispatch({ type: "OVER" });
     }
   }, [state.timer]);
-  return <h1>{state.timer < 0 ? "End" : state.timer}</h1>;
+  return <h1>{state.timer <= 0 ? "End" : state.timer}</h1>;
 };
 
 export default TimerText;
