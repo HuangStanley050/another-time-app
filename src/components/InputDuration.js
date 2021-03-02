@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useTimer } from "../contexts/Timer";
 
 const InputDuration = () => {
-  const { state, dispatch } = useTimer();
+  const { dispatch } = useTimer();
   const handleInput = (e) => {
     console.log(e.target.value);
     dispatch({
