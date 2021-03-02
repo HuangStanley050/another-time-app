@@ -1,5 +1,5 @@
 export const initalState = {
-  timer: 5,
+  timer: 3,
   pause: false,
   intervalID: null,
 };
@@ -27,6 +27,7 @@ export const reducer = (state = initalState, action) => {
         timer: action.payload.duration,
       };
     case "OVER":
+      console.log(state.intervalID);
       clearInterval(state.intervalID);
       return {
         ...state,

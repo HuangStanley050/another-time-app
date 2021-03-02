@@ -8,9 +8,9 @@ const CircleDisplay = () => {
   useEffect(() => {
     let circle = document.getElementById("circle");
     circle.setAttribute("stroke-dashoffset", offset);
-    setOffset(offset - 50);
-    console.log(circle);
-    console.log("re render circle");
+    setOffset(offset - 1);
+    // console.log(circle);
+    // console.log("re render circle");
   }, [state.timer]);
 
   return (
