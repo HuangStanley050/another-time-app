@@ -6,7 +6,7 @@ const PlayButton = () => {
   const updateTimer = () => {
     let update;
     const intervalID = setInterval(() => {
-      update = state.timer -= 0.05;
+      update = (state.timer -= 0.05).toFixed(2);
       dispatch({ type: "PLAY", payload: { update, intervalID } });
     }, 50);
   };
