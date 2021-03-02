@@ -3,6 +3,7 @@ import PlayButton from "./components/playButton";
 import PauseButton from "./components/PauseButton";
 import InputDuration from "./components/InputDuration";
 import TimerText from "./components/TimeText";
+import CircleDisplay from "./components/CircleDisplay";
 import { TimerProvider, useTimer } from "./contexts/Timer";
 import "./App.css";
 
@@ -14,9 +15,14 @@ function App() {
         <div>
           <TimerText />
         </div>
-        <InputDuration />
-        <PlayButton />
-        <PauseButton />
+
+        <CircleDisplay />
+
+        <div>
+          <InputDuration />
+          <PlayButton />
+          <PauseButton />
+        </div>
       </TimerProvider>
     </div>
   );

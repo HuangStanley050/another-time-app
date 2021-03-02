@@ -1,5 +1,6 @@
 export const initalState = {
-  timer: 5,
+  timer: 10,
+  duration: 10,
   pause: false,
   intervalID: null,
 };
@@ -24,8 +25,11 @@ export const reducer = (state = initalState, action) => {
     case "DURATION_CHANGE":
       return {
         ...state,
+        timer: action.payload.duration,
+        duration: action.payload.duration,
       };
     case "OVER":
+      console.log(state.intervalID);
       clearInterval(state.intervalID);
       return {
         ...state,
