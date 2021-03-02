@@ -24,6 +24,7 @@ export const reducer = (state = initalState, action) => {
     case "DURATION_CHANGE":
       return {
         ...state,
+        timer: action.payload.duration,
       };
     case "OVER":
       clearInterval(state.intervalID);
