@@ -1,5 +1,6 @@
 export const initalState = {
-  timer: 3,
+  timer: 5,
+  duration: 5,
   pause: false,
   intervalID: null,
 };

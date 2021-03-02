@@ -3,12 +3,12 @@ import { useTimer } from "../contexts/Timer";
 
 const CircleDisplay = () => {
   const { state } = useTimer();
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(state.duration);
   const perimeter = 190 * 2 * Math.PI;
   useEffect(() => {
     let circle = document.getElementById("circle");
     circle.setAttribute("stroke-dashoffset", offset);
-    setOffset(offset - 1);
+    setOffset((perimeter * state.timer) / state.duration - perimeter);
     // console.log(circle);
     // console.log("re render circle");
   }, [state.timer]);
