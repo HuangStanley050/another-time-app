@@ -12,7 +12,7 @@ const PauseButton = () => {
   };
   return (
     <button onClick={updateTimer} id="pause">
-      Pause
+      <i class="fas fa-pause" />
     </button>
   );
 };

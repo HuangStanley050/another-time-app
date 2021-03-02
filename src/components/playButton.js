@@ -13,7 +13,7 @@ const PlayButton = () => {
 
   return (
     <button onClick={updateTimer} id="start">
-      Play
+      <i class="fas fa-play" />
     </button>
   );
 };
